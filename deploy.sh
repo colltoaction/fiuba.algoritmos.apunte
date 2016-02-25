@@ -3,7 +3,9 @@ set -e # exit with nonzero exit code if anything fails
 
 # move the pdf output files and create a *new* Git repo there
 mkdir out
-cp *.pdf out/
+pdftohtml -c ejercicios.pdf out/ejercicios.html
+pdftohtml -c principal.pdf out/principal.html
+echo "<a href=\"ejercicios.html\">Ejercicios</a><br><a href=\"principal.html\">Principal</a>" > out/index.html
 cd out
 git init
 
