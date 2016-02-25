@@ -1,6 +1,9 @@
 script:
     - make
 
+after_success:
+    - bash ./deploy.sh
+
 addons:
   apt:
     packages:
