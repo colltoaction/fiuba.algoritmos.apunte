@@ -6,3 +6,4 @@ addons:
     packages:
     - texlive-latex-base
     - texlive-latex-extra
+    - texlive-latex-recommended
