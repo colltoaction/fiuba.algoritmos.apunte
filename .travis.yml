@@ -1,2 +1,7 @@
 script:
     - make
+
+addons:
+  apt:
+    packages:
+    - texlive-latex-base
