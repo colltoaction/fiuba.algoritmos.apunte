@@ -1,11 +1,16 @@
 #!/bin/bash
 set -e # exit with nonzero exit code if anything fails
 
-# move the pdf output files and create a *new* Git repo there
+# move the pdf output files and create what will be in the github page
 mkdir out
-pdftohtml -c ejercicios.pdf out/ejercicios.html
-pdftohtml -c principal.pdf out/principal.html
-echo "<a href=\"ejercicios.html\">Ejercicios</a><br><a href=\"principal.html\">Principal</a>" > out/index.html
+cp *.pdf out/
+echo "<html>
+<body>
+<a href=\"ejercicios.pdf\">Ejercicios</a>
+<br>
+<a href=\"principal.pdf\">Principal</a>
+</body>
+</html>" > out/index.html
 cd out
 git init
 
